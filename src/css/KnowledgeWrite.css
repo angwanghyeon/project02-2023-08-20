@@ -1,0 +1,51 @@
+.knowledge-write-title{
+  display: inline-block
+}
+.ask{
+  display: flex;
+}
+.knowledge-content {
+  text-align: left;
+  margin-left: 20px;
+}
+.knowledge-content .knowledge-category{
+  text-align: center;
+}
+.knowledge-content .page{
+  text-align: center;
+}
+.ask-box{
+  border: 1px solid black;
+  font-size: large;
+}
+.ask-box div{
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+.ask-textarea input{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  width: 90%;
+}
+input, textarea{
+  font-size: large;
+}
+.ask-textarea textarea{
+  width: 90%;
+}
+.file-attach{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.submit-knowledge{
+  padding: 30px 50px;
+  background-color: violet;
+  color: white;
+  font-size: larger;
+}
+.button-box{
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}

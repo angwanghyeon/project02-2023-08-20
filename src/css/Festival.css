@@ -1,0 +1,19 @@
+.festival-category label{
+  margin-right: 20px;
+  padding: 10px;
+  background-color: skyblue;
+}
+.on-festival ul {
+  display: grid;
+  text-decoration: none;
+  list-style: none;
+  grid-template-columns: 1fr 1fr;
+}
+.off-festival ul{
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.festival-list li{
+  padding: 20px;
+}

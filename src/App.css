@@ -1,0 +1,21 @@
+.app{
+  text-align: center;
+  display: flexbox;
+  position: relative;
+}
+.header{
+  width: 100vw;
+  height: 200px;
+  margin-bottom: 100px;
+  display: flex;
+  background-color: rgb(178, 214, 189);
+}
+.footer{
+  bottom: 0;
+  height: 200px;
+  text-align: center;
+  width: 100%;
+}
+.app > div{
+  display: block;
+}
