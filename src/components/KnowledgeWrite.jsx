@@ -1,6 +1,6 @@
 import React from 'react';
 import style from '../css/KnowledgeWrite.css'
-import { VscSearch } from 'react-icons/vsc';
+// import { VscSearch } from 'react-icons/vsc';
 
 
 const KnowledgeWrite = () => {
@@ -27,7 +27,7 @@ const KnowledgeWrite = () => {
         <div className='location-search'>
           <h4>장소 검색 </h4>
           <input type="text" />
-          <button><VscSearch /></button>
+          {/* <button><VscSearch /></button> */}
         </div>
         <div className='ask-textarea'>
           <h4>질문 내용 작성</h4>

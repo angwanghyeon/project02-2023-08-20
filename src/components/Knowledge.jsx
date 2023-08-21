@@ -1,5 +1,5 @@
 import React from 'react';
-import { VscSearch } from 'react-icons/vsc';
+// import { VscSearch } from 'react-icons/vsc';
 import style from '../css/Knowledge.css'
 import { useNavigate } from 'react-router-dom';
 
@@ -34,7 +34,8 @@ const Knowledge = () => {
         </div>
         <div className='searchKnowledge'>
           <h2>지식in <input type="text" placeholder='검색어를 입력하세요' />
-          <button><VscSearch /></button></h2>
+          {/* <button><VscSearch /></button> */}
+          </h2>
         </div>
         <div className='knowledge-table'>
         <div className='page-choice'>

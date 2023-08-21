@@ -1,6 +1,6 @@
 import React from 'react';
 import style from '../css/NoticeBoard.css'
-import { VscSearch } from 'react-icons/vsc';
+// import { VscSearch } from 'react-icons/vsc';
 
 
 const NoticeBoard = () => {
@@ -9,7 +9,8 @@ const NoticeBoard = () => {
       <h1 style={{textAlign:'left'}}>공지사항</h1>
       <div className='searchNotice'>
         <h2>공지사항 <input type="text" placeholder='검색어를 입력하세요' />
-        <button><VscSearch /></button></h2>
+        {/* <button><VscSearch /></button> */}
+        </h2>
       </div>
       <br />
       <div className='notice-table'>

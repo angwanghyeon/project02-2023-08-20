@@ -1,5 +1,5 @@
 import React from 'react';
-import { VscSearch } from 'react-icons/vsc';
+// import { VscSearch } from 'react-icons/vsc';
 import style from '../css/QnABoard.css';
 
 const QnABoard = () => {
@@ -8,7 +8,8 @@ const QnABoard = () => {
       <h1 style={{textAlign:'left'}}>Q & A</h1>
       <div className='QnA'>
         <h2>Q & A <input type="text" placeholder='검색어를 입력하세요' />
-        <button><VscSearch /></button></h2>
+        {/* <button><VscSearch /></button> */}
+        </h2>
       </div>
       <div className='qna-table'>
       <div className='page-choice'>
