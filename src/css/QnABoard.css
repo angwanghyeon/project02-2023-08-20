@@ -2,12 +2,18 @@
   width: 100%;
   display: flex;
 }
+.content h1{
+  margin-left: 20px;
+}
 .QnA{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   background-color: #ccc;
-  padding: 5px;
+  padding: 10px;
+}
+.QnA h2{
+  margin-left: 20px;
 }
 .QnA input{
   margin: 0;

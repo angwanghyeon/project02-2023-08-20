@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from '../css/NoticeBoard.css'
-// import { VscSearch } from 'react-icons/vsc';
-
+import { VscSearch } from 'react-icons/vsc';
+import { Link, useNavigate } from 'react-router-dom';
+import { noticeData } from '../data/Data';
+import TestTr from './TestTr';
 
 const NoticeBoard = () => {
+  const navigate = useNavigate();
+  const [newNoticedata, setNewNoticeData] = useState(noticeData);
+
   return (
     <div className='content'>
-      <h1 style={{textAlign:'left'}}>공지사항</h1>
+      <h1><img src="../img/notice-icon.png" alt="공지사항 이미지" /></h1>
       <div className='searchNotice'>
         <h2>공지사항 <input type="text" placeholder='검색어를 입력하세요' />
-        {/* <button><VscSearch /></button> */}
+        <button><VscSearch /></button>
         </h2>
       </div>
       <br />
@@ -31,36 +36,11 @@ const NoticeBoard = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>관광지</td>
-              <td>추가된 관광지 목록</td>
-              <td>2023-08-21</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>축제 및 행사</td>
-              <td>추가된 행사 목록</td>
-              <td>2023-08-21</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>음식</td>
-              <td>제거된 음식점 목록</td>
-              <td>2023-08-21</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>숙박</td>
-              <td>추가된 게스트하우스 목록</td>
-              <td>2023-08-21</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>서버 업데이트</td>
-              <td>전체 서버 업데이트</td>
-              <td>2023-08-14</td>
-            </tr>
+            {newNoticedata.map((id, index)=>{
+              return (
+                <TestTr data={newNoticedata[index]} key={newNoticedata[index].id}></TestTr>
+              )
+            })}
           </tbody>
         </table>
       </div>

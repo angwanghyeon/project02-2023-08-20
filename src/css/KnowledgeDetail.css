@@ -1,0 +1,57 @@
+.knowledgeDetail-title{
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+.knowledgeDetail-title h1{
+  text-align: left;
+  width: 80%;
+}
+.knowledgeDetail-title span{
+  text-align: right;
+}
+.knowledgeDetail-box{
+  text-align: left;
+  margin-top: 20px;
+  border-top: 2px solid black;
+  border-bottom: 1px solid #ccc;
+  padding: 20px 30px;
+}
+.knowledgeDetail-box div{
+  display: flex;
+}
+.knowledgeDetail-img img{
+  margin-right: 20px;
+}
+.knowledgeDetail-question h3{
+  margin-right: 20px;
+  width: 80%;
+}
+.knowledgeDetail-question p{
+  font-size: small;
+}
+.knowledgeDetail-inside textarea{
+  width: 100%;
+  margin-bottom: 20px;
+}
+.knowledgeDetail-inside textarea:focus{
+  outline: none;
+}
+.knowledgeDetail-answer-btn{
+  width: 100%;
+  justify-content: center;
+}
+.knowledgeDetail-answer-btn button{
+  width: 200px;
+  height: 50px;
+  background-color: orange;
+}
+.knowledgeDetail-answer-box{
+  text-align: left;
+  margin: 10px 20px;
+}
+.knowledgeDetail-answer-box textarea{
+  width: 100%;
+}
+.knowledgeDetail-answer-box textarea:focus{
+  outline: none;
+}

@@ -3,7 +3,6 @@ import {Link, NavLink} from 'react-router-dom'
 const Header = () => {
     return (
         <div className='header'>
-            <h1>JMT</h1>
             <img src="../img/JMT-icon.jpg" alt="" />
             <nav>
                 <ul className='main-nav'>
@@ -21,7 +20,7 @@ const Header = () => {
                         <div className='notice-detail'></div>
                             <ul>
                                 <Link to='/notice'><li>공지사항</li></Link>
-                                <Link to='/notice/qna'><li>QnA</li></Link>
+                                <Link to='/qna'><li>QnA</li></Link>
                             </ul>
                     </li>
                     <li className='login'>

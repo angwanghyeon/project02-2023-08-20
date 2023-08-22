@@ -1,5 +1,5 @@
 import React from 'react';
-// import { VscAccount } from 'react-icons/vsc';
+import { VscAccount } from 'react-icons/vsc';
 import style from '../css/Login.css'
 import { Link } from 'react-router-dom';
 
@@ -27,7 +27,7 @@ const Login = () => {
         </div>
         <div className='sns-login'>
           <Link to='/kakao'><img src="../img/kakao-icon.png" alt="" /></Link>
-          <Link to='/kakao'><img src="../img/google-icon.png" alt="" /></Link>
+          <Link to='/google'><img src="../img/google-icon.png" alt="" /></Link>
         </div>
       </div>
     </div>

@@ -1,11 +1,28 @@
-import React from 'react';
-// import { VscSearch } from 'react-icons/vsc';
+import React, { useState } from 'react';
 import style from '../css/Knowledge.css'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { VscSearch } from 'react-icons/vsc';
+import { knowledgeData } from '../data/Data';
 
+
+const Trkn = (props) =>{
+const navigate = useNavigate();
+const {no, category, title, content, persnal, createDate} = props.data;
+
+return (
+  <tr onClick={()=>navigate('/info/knowledge/detail/'+no)}>
+    <td>{no}</td>
+    <td>{category}</td>
+    <td>{title}</td>
+    <td>{persnal}</td>
+    <td>{createDate}</td>
+  </tr>
+);
+}
 
 const Knowledge = () => {
   const navigate = useNavigate();
+  const [newKnowledgeData, setNewKnowledgeData] = useState(knowledgeData);
   return (
     <div className='content'>
       <div className='knowledge-title'>
@@ -15,13 +32,13 @@ const Knowledge = () => {
         <button onClick={()=>navigate('/info/knowledge/write')}>질문하기</button>
       </div>
       <div className='knowledge-content'>
-        <div className='most-qna1'>
-          <img src="" alt="이미지1" />
-          <p>가장 많이 본 qna1</p>
-          <p>가장 많이 본 qna1의 내용 간략히</p>
+        <div className='most-qna1' onClick={()=>navigate('/info/knowledge/detail/1')}>
+            <img src="../img/qna-icon.png" alt="이미지1" style={{width:'120px', height:'120px'}}/>
+            <p>가장 많이 본 qna1</p>
+            <p>가장 많이 본 qna1의 내용 간략히</p> 
         </div>
-        <div className='most-qna2'>
-          <img src="" alt="이미지2" />
+        <div className='most-qna2' onClick={()=>navigate('/info/knowledge/detail/2')}>
+          <img src="../img/qna-icon.png" alt="이미지2" style={{width:'120px', height:'120px'}} />
           <p>가장 많이 본 qna2</p>
           <p>가장 많이 본 qna2의 내용 간략히</p>
         </div>
@@ -34,7 +51,7 @@ const Knowledge = () => {
         </div>
         <div className='searchKnowledge'>
           <h2>지식in <input type="text" placeholder='검색어를 입력하세요' />
-          {/* <button><VscSearch /></button> */}
+          <button><VscSearch /></button>
           </h2>
         </div>
         <div className='knowledge-table'>
@@ -56,48 +73,11 @@ const Knowledge = () => {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>음식</td>
-                <td>고기국수 맛집은?</td>
-                <td>고국잘알</td>
-                <td>2023-08-19</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>관광지</td>
-                <td>우도를 즐기는 방법</td>
-                <td>제주도민12</td>
-                <td>2023-08-19</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>축제</td>
-                <td>이번달의 축제에 대해서...</td>
-                <td>고국잘알</td>
-                <td>2023-08-18</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>음식</td>
-                <td>흑돼지를 맛집은?</td>
-                <td>제주도의 육식맨</td>
-                <td>2023-08-16</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>기타</td>
-                <td>전기차 기름이 떨어졌어요</td>
-                <td>25살 귀요미</td>
-                <td>2023-08-15</td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>음식</td>
-                <td>고기국수 맛집은?</td>
-                <td>고국잘알</td>
-                <td>2023-08-19</td>
-              </tr>
+              {newKnowledgeData.map((id, index)=>{
+                return (
+                  <Trkn data={newKnowledgeData[index]} key={newKnowledgeData[index].id}></Trkn>
+                )
+              })}
             </tbody>
           </table>
         </div>

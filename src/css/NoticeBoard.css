@@ -1,13 +1,21 @@
 .content{
   width: 100%;
   display: flex;
+  position: relative;
+}
+.content h1{
+  margin-left: 10px;
+  text-align: left;
 }
 .searchNotice{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   background-color: #ccc;
-  padding: 5px;
+  padding: 10px;
+}
+.searchNotice h2{
+  margin-left: 20px;
 }
 .searchNotice input{
   margin: 0;

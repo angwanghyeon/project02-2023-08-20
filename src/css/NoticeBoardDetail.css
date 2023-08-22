@@ -1,0 +1,42 @@
+.noticeDetail-title{
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+.noticeDetail-title h1{
+  text-align: left;
+  width: 80%;
+}
+.noticeDetail-title span{
+  text-align: right;
+}
+.noticeDetail-box{
+  text-align: left;
+  margin-top: 20px;
+  border-top: 2px solid black;
+  border-bottom: 1px solid #ccc;
+  padding: 20px 30px;
+}
+.noticeDetail-box div{
+  display: flex;
+}
+.noticeDetail-img img{
+  margin-right: 20px;
+}
+.noticeDetail-boxTitle h3{
+  margin-right: 20px;
+  width: 80%;
+}
+.noticeDetail-boxTitle p{
+  font-size: small;
+}
+.noticeDetail-inside textarea{
+  width: 100%;
+  margin-bottom: 20px;
+}
+.noticeDetail-inside textarea:focus{
+  outline: none;
+}
+.no {
+  margin-right: 20px;
+  font-size: large;
+}

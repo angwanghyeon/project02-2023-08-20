@@ -3,17 +3,31 @@
   padding: 10px;
   background-color: skyblue;
 }
-.on-festival ul {
+.on-festival{
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-right: 20px;
+}
+.on-festival ul{
   text-decoration: none;
   list-style: none;
-  grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 0.8fr 0.8fr;
+  border-collapse: collapse;
 }
-.off-festival ul{
-  list-style: none;
+.off-festival{
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-right: 20px;
+}
+.off-festival ul{
+  text-decoration: none;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 0.8fr 0.8fr;
+  border-collapse: collapse;
 }
 .festival-list li{
   padding: 20px;
+  border: 0.5px solid #ccc;
 }
