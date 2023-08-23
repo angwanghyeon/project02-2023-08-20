@@ -11,7 +11,7 @@
   position: relative;
   display: flex;
   background-color: #3c3cb4;
-  padding: 10px;
+  padding: 20px;
   color: white;
   margin: 0 10px;
 }
@@ -20,8 +20,8 @@
 }
 .QnA{
   position: absolute;
-  right: 25px;
-  top: 25px;
+  right: 2px;
+  bottom: 10px;
 }
 .QnA input{
   margin: 0;
@@ -44,7 +44,7 @@ outline: none;
   margin-left: 30px;
   margin-top: 10px;
 }
-tr, th, td{
+.qna-table tr,.qna-table th,.qna-table td{
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   padding: 10px;
@@ -56,7 +56,7 @@ tr, th, td{
   text-align: center;
 }
 .page{
-  margin-top: 30px;
+  margin: 30px;
 }
 .page-choice{
   position: relative;

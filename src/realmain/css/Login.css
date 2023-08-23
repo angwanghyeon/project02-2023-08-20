@@ -1,6 +1,10 @@
 .login-content {
   text-align: center;
 }
+.login-title h1, .login-title p{
+  padding: 10px;
+  margin: 10px;
+}
 .login-active {
   width: 50%;
   margin: 20px auto;

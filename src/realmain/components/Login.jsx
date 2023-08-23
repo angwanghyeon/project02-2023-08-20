@@ -3,6 +3,7 @@ import { VscAccount } from 'react-icons/vsc';
 import style from '../css/Login.css'
 import { Link } from 'react-router-dom';
 import OnModal from './OnModal';
+import LoginModal from './LoginModal';
 
 const Login = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -27,7 +28,7 @@ const Login = () => {
         <p className='login-btn'>로그인</p>
         <p className='membership'>회원가입</p>
         <p className='memberCheck'><button onClick={showModal}>아이디/비밀번호찾기</button>
-          {modalOpen && <OnModal setModalOpen={setModalOpen}></OnModal>}
+          {modalOpen && <LoginModal setModalOpen={setModalOpen}></LoginModal>}
         </p>
         <div className='sns-login'>
           <Link to='/kakao'><img src="../img/kakao-icon.png" alt="" /></Link>

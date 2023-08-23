@@ -20,6 +20,7 @@
 .knowledge-title p{
   font-size: large;
   font-weight: 600;
+  padding: 10px;
 }
 .question{
   width: 210px;
@@ -46,7 +47,7 @@
   margin: 0 10px;
   display: flex;
   background-color: #3c3cb4;
-  padding: 5px;
+  padding: 20px;
   color: white;
 }
 .searchKnowledge-box h2{
@@ -54,8 +55,8 @@
 }
 .searchKnowledge{
   position: absolute;
-  right: 25px;
-  top: 25px;
+  right: 2px;
+  bottom: 10px;
 }
 .searchKnowledge input{
   margin: 0;

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import style from '../css/Festival.css'
+import '../css/Festival.css'
 import { Link, useNavigate } from 'react-router-dom';
 import data from '../data/festival.json';
 

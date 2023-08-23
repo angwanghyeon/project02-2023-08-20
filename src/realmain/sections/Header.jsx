@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <div className='header'>
             <img src="../img/JMT-icon.jpg" alt="" />
-            <nav>
+            <nav className='head-menu'>
                 <ul className='main-nav'>
                     <li className='info'>
                         <Link to='/info/knowledge'>여행정보</Link>

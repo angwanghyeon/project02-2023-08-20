@@ -23,6 +23,7 @@
 }
 .knowledgeDetail-box div{
   display: flex;
+  padding: 10px;
 }
 .knowledgeDetail-img img{
   margin-right: 20px;

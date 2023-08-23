@@ -23,6 +23,7 @@
 }
 .noticeDetail-box div{
   display: flex;
+  padding: 10px;
 }
 .noticeDetail-img img{
   margin-right: 20px;

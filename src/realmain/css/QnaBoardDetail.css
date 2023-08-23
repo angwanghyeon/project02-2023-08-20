@@ -23,6 +23,7 @@
 }
 .qnaDetail-box div{
   display: flex;
+  padding: 10px;
 }
 .qnaDetail-img img{
   margin-right: 20px;

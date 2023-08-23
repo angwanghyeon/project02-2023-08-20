@@ -10,6 +10,9 @@
   display: flex;
   background-color: rgb(178, 214, 189);
 }
+.main-nav{
+  display: flex
+}
 .footer{
   bottom: 0;
   height: 200px;
