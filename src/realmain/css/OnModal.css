@@ -10,14 +10,38 @@
   border: 1px solid black;
   border-radius: 8px;
 }
-.modal-close{
+
+.modal-container div {
+  width: 100vw;
+}
+
+.modal-close {
   position: absolute;
   right: 10px;
   top: 10px;
 }
-.modal-container button{
+
+.modal-container button {
   width: 20px;
   height: 10px;
   background-color: rgba(255, 236, 179, 0.7);
   border: none;
+}
+
+.answer-content textarea {
+  resize: none;
+  position: absolute;
+  left: 20px;
+  top: 100px;
+}
+
+.answer-writer {
+  margin: 20px;
+  position: relative;
+  clear: both;
+}
+
+.answer-writer .date {
+  position: absolute;
+  right: 50px;
 }
