@@ -10,9 +10,6 @@ import Paging from './Paging';
 const Tr = (props) => {
   const navigate = useNavigate();
   const { no, Q, category, title, content, createDate } = props.data;
-
-  
-  // lastPage.current = newQnaData.length / offset;
   return (
     <tr onClick={() => navigate('/qna/detail/' + no)}>
       <td>{Q}</td>
@@ -22,36 +19,32 @@ const Tr = (props) => {
     </tr>
   );
 }
-const QnaPaging = () => {
-  const [newQnaData, setNewQnaData] = useState(qnaData);
-  const [page, setPage] = useState(1);
-  const offset = 10;
-  const startPage = (page - 1) * offset;
-  const lastPage = startPage + offset;
-  const currentItems = qnaData.slice(startPage, lastPage);
-
-  return (
-    <div>
-      {Array.from({length:Math.ceil(qnaData.length / offset)}).map((_,index)=> (
-        <button key={index} onClick={() => setPage(index + 1)}>{index+1}</button>
-      ))}
-    </div>
-  )
-}
 
 const QnABoard = () => {
   const [newQnaData, setNewQnaData] = useState(qnaData);
-  const offset = 10;
+  const [currentPage , setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentItems = newQnaData.slice(startIndex, endIndex);
+  const totalPages = Math.ceil(newQnaData.length / itemsPerPage);
+  
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
 
   return (
     <div className='content'>
       <h1 style={{ textAlign: 'left' }}>
-        <img src="../img/qna-icon.png" alt="qna아이콘" />
+        <img src="../img/qna-icon.png" alt="qna아이콘" style={{width:'120px', height:'120px'}}/>
       </h1>
-      <div className='QnA'>
-        <h2>Q & A <input type="text" placeholder='검색어를 입력하세요' />
-          <button><VscSearch /></button>
+      <div className='QnA-box'>
+        <h2>Q & A 
         </h2>
+          <div className='QnA'>
+            <input type="text" placeholder='검색어를 입력하세요' />
+            <button><VscSearch /></button>
+          </div>
       </div>
       <div className='qna-table'>
         <div className='page-choice'>
@@ -71,18 +64,18 @@ const QnABoard = () => {
             </tr>
           </thead>
           <tbody>
-            {newQnaData.map((id, index) => {
-              if(index <= offset) {
+            {currentItems.map((item, index) => {
                 return (
-                  <Tr data={newQnaData[index]} key={newQnaData[index].id}></Tr>
+                  <Tr data={item} key={item.id}></Tr>
                 )
-              }
             })}
           </tbody>
         </table>
       </div>
       <div className='page'>
-        <QnaPaging></QnaPaging>
+        <Paging
+        totalPages={totalPages} currentPage={currentPage}
+        onPageChange={handlePageChange}></Paging>
       </div>
     </div>
   );

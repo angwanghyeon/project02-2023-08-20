@@ -1,12 +1,12 @@
 .app{
   text-align: center;
-  display: flexbox;
   position: relative;
+  width: 100vw;
 }
 .header{
   width: 100vw;
   height: 200px;
-  margin-bottom: 100px;
+  margin-bottom: 10px;
   display: flex;
   background-color: rgb(178, 214, 189);
 }
@@ -18,4 +18,13 @@
 }
 .app > div{
   display: block;
+}
+.main{
+  display: hidden;
+}
+ul li {
+  list-style: none;
+}
+a{
+  text-decoration: none;
 }

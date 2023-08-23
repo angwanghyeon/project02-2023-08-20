@@ -1,51 +1,62 @@
 .content{
   width: 100%;
   display: flex;
+  position: relative;
 }
 .content h1{
-  margin-left: 20px;
+  margin-left: 10px;
+  text-align: left;
 }
-.QnA{
-  width: 100%;
+.searchNotice-box{
+  position: relative;
+  margin: 0 10px;
   display: flex;
-  flex-wrap: wrap;
-  background-color: #ccc;
+  background-color: #3c3cb4;
   padding: 10px;
+  color: white;
 }
-.QnA h2{
+.searchNotice-box h2{
   margin-left: 20px;
 }
-.QnA input{
+.searchNotice{
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
+.searchNotice input{
   margin: 0;
-  margin-left: 30px;
   padding: 10px;
   border: none;
 }
-.QnA button{
+.searchNotice input:focus{
+  outline: none;
+}
+.searchNotice button{
   padding: 10px;
-  background-color: orange;
+  background-color: #3c3cb4;
   color: white;
   border: none;
   font-size: large;
 }
-.qna-table table{
+.content table{
   border-collapse: collapse;
-  width: 90%;
+  width: 95%;
   margin-left: 30px;
+  margin-top: 10px;
 }
 tr, th, td{
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   padding: 10px;
 }
-.qna-table{
+.notice-table{
   clear: both;
   width: 100%;
-  margin-top: 10px;
   text-align: center;
 }
 .page{
   margin-top: 30px;
+  text-align: center;
 }
 .page-choice{
   position: relative;

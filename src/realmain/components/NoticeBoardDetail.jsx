@@ -23,7 +23,7 @@ const NoticeBoardDetail = ({data}) => {
           <div className='noticeDetail-boxTitle'>
             <p className='no'>No . {detail.no}</p>
             <h3>{detail.title}</h3>
-            <p>{detail.createDate}</p>
+            <p className='date'>{detail.createDate}</p>
           </div>
           <div className='noticeDetail-inside'>
             <textarea cols="30" rows="10" readOnly placeholder='공지사항 내용' value={detail.content}></textarea>

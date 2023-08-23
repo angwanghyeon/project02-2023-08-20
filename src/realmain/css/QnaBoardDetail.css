@@ -1,13 +1,18 @@
+.qnaDetail-content{
+  margin: 10px 30px;
+}
 .qnaDetail-title{
   display: flex;
   border-bottom: 1px solid #ccc;
 }
 .qnaDetail-title h1{
   text-align: left;
-  width: 80%;
+  width: 90%;
+  margin-left: 20px;
 }
 .qnaDetail-title span{
   text-align: right;
+  line-height: 86px;
 }
 .qnaDetail-box{
   text-align: left;
@@ -21,22 +26,41 @@
 }
 .qnaDetail-img img{
   margin-right: 20px;
+  width: 120px;
+  height: 120px;
+}
+.qnaDetail-img p{
+  width: 15%;
+  text-align: center;
+  font-size: x-large;
+  height: 120px;
+  line-height: 120px;
+}
+.qnaDetail-boxTitle{
+  border-top: 1px solid black;
+  border-bottom: 1px solid gray;
+  margin: 10px auto;
+  position: relative;
 }
 .qnaDetail-boxTitle h3{
   margin-right: 20px;
   width: 80%;
+  text-align: center;
 }
-.qnaDetail-boxTitle p{
-  font-size: small;
+.qnaDetail-boxTitle .no{
+  margin-left: 3px;
+  font-size: large;
+  margin-right: 10px;
+}
+.qnaDetail-boxTitle .date{
+  position: absolute;
+  right: 5px;
 }
 .qnaDetail-inside textarea{
   width: 100%;
   margin-bottom: 20px;
+  border: none;
 }
 .qnaDetail-inside textarea:focus{
   outline: none;
-}
-.no {
-  margin-right: 20px;
-  font-size: large;
 }

@@ -4,18 +4,31 @@ import { VscSearch } from 'react-icons/vsc';
 import { Link, useNavigate } from 'react-router-dom';
 import { noticeData } from '../data/Data';
 import TestTr from './TestTr';
+import Paging from './Paging';
 
 const NoticeBoard = () => {
   const navigate = useNavigate();
   const [newNoticedata, setNewNoticeData] = useState(noticeData);
+  const [currentPage , setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentItems = noticeData.slice(startIndex, endIndex);
+  const totalPages = Math.ceil(noticeData.length / itemsPerPage);
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
 
   return (
     <div className='content'>
       <h1><img src="../img/notice-icon.png" alt="공지사항 이미지" /></h1>
-      <div className='searchNotice'>
-        <h2>공지사항 <input type="text" placeholder='검색어를 입력하세요' />
-        <button><VscSearch /></button>
+      <div className='searchNotice-box'>
+        <h2>공지사항
         </h2>
+           <div className='searchNotice'>
+             <input type="text" placeholder='검색어를 입력하세요' />
+          <button><VscSearch /></button>
+           </div>
       </div>
       <br />
       <div className='notice-table'>
@@ -36,20 +49,18 @@ const NoticeBoard = () => {
             </tr>
           </thead>
           <tbody>
-            {newNoticedata.map((id, index)=>{
+            {currentItems.map((item, index)=>{
               return (
-                <TestTr data={newNoticedata[index]} key={newNoticedata[index].id}></TestTr>
+                <TestTr data={item} key={item.id}></TestTr>
               )
             })}
           </tbody>
         </table>
       </div>
       <div className='page'>
-        <button>넘기기</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>4</button>
+      <Paging
+        totalPages={totalPages} currentPage={currentPage}
+        onPageChange={handlePageChange}></Paging>
       </div>
     </div>
   );

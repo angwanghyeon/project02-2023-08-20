@@ -19,7 +19,7 @@ const QnaBoardDetail = ({ data }) => {
         <div className='qnaDetail-boxTitle'>
           <p className='no'>No . {detail.no}</p>
           <h3>{detail.title}</h3>
-          <p>{detail.createDate}</p>
+          <p className='date'>{detail.createDate}</p>
         </div>
         <div className='qnaDetail-inside'>
           <textarea cols="30" rows="10" readOnly placeholder='qna 내용' value={detail.content}></textarea>

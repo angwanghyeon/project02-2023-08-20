@@ -7,32 +7,40 @@
   margin-left: 10px;
   text-align: left;
 }
-.searchNotice{
-  width: 100%;
+.QnA-box{
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
-  background-color: #ccc;
+  background-color: #3c3cb4;
   padding: 10px;
+  color: white;
+  margin: 0 10px;
 }
-.searchNotice h2{
+.QnA-box h2{
   margin-left: 20px;
 }
-.searchNotice input{
+.QnA{
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
+.QnA input{
   margin: 0;
-  margin-left: 30px;
   padding: 10px;
   border: none;
 }
-.searchNotice button{
+.QnA input:focus{
+outline: none;
+}
+.QnA button{
   padding: 10px;
-  background-color: orange;
+  background-color: #3c3cb4;
   color: white;
   border: none;
   font-size: large;
 }
-.content table{
+.qna-table table{
   border-collapse: collapse;
-  width: 90%;
+  width: 95%;
   margin-left: 30px;
   margin-top: 10px;
 }
@@ -41,9 +49,10 @@ tr, th, td{
   border-bottom: 1px solid black;
   padding: 10px;
 }
-.notice-table{
+.qna-table{
   clear: both;
   width: 100%;
+  margin-top: 10px;
   text-align: center;
 }
 .page{

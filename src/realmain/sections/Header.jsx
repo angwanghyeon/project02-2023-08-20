@@ -26,8 +26,8 @@ const Header = () => {
                     <li className='login'>
                         <Link to='/login'>로그인</Link>
                     </li>
-                    <li className='logout'>
-                        <Link to='/'>로그아웃</Link>
+                    <li className='language'>
+                        <Link to={'/'}>language</Link>
                     </li>
                 </ul>
             </nav>          

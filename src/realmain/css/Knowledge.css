@@ -1,0 +1,101 @@
+.content{
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+.knowledge-title{
+  background-image: url(../img/knowledge-back.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 10px;
+  height: 400px;
+  position: relative;
+}
+.knowledge-title h1{
+  text-align: center;
+  color: rgb(227, 122, 122);
+  line-height: 200px;
+}
+.knowledge-title p{
+  font-size: large;
+  font-weight: 600;
+}
+.question{
+  width: 210px;
+  height: 65px;
+  border: none;
+  background-image: url(../img/question-box.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+}
+.knowledge-content{
+  margin: 0 10px;
+}
+.most-qna1, .most-qna2{
+  display: flex;
+}
+.most-qna1 p, .most-qna2 p{
+  margin: 0 10px;
+  line-height: 120px;
+}
+.searchKnowledge-box{
+  position: relative;
+  margin: 0 10px;
+  display: flex;
+  background-color: #3c3cb4;
+  padding: 5px;
+  color: white;
+}
+.searchKnowledge-box h2{
+  margin-left: 20px;
+}
+.searchKnowledge{
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
+.searchKnowledge input{
+  margin: 0;
+  padding: 10px;
+  border: none;
+}
+.searchKnowledge input:focus{
+  outline: none;
+}
+.searchKnowledge button{
+  padding: 10px;
+  background-color: #3c3cb4;
+  color: white;
+  border: none;
+  font-size: large;
+}
+.knowledge-table{
+  clear: both;
+  width: 100%;
+  text-align: center;
+  margin: 10px auto;
+}
+.knowledge-category{
+  margin: 0 10px;
+}
+.knowledge-category button{
+  margin: 10px auto;
+  width: 20%;
+  padding: 10px 0;
+  background-color: white;
+  color: black;
+  border: 0.8px solid #ccc;
+}
+.page-choice{
+  position: relative;
+  width: 100%;
+  height: 30px;
+}
+.page-choice select{
+  margin-bottom: 10px;
+  right: 10px;
+  position: absolute;
+}

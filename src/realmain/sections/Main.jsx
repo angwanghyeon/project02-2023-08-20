@@ -18,11 +18,8 @@ const Main = () => {
     const [newKnowledgeData, setNewKnowledgeData] = useState(knowledgeData);
     const [newFestivalData, setNewFestivalData] = useState(data.data);
     return (
-        //   <Routes>
-        //     <Route path='/info/notice' element={<MainBoardList></MainBoardList>}>
-        //     </Route>
-        //  </Routes>
         <div className='app'>
+            <div className='main'>메인입니당</div>
             <Routes>
                 <Route path='/notice' element={<NoticeBoard></NoticeBoard>}></Route>
                 <Route path='/qna' element={<QnABoard></QnABoard>}></Route>
