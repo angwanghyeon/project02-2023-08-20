@@ -26,7 +26,7 @@ const Login = () => {
         </div>
         <p className='id-save'>아이디 저장 <input type="checkbox" /></p>
         <p className='login-btn'>로그인</p>
-        <p className='membership'>회원가입</p>
+        <p className='membership'><button>회원가입</button></p>
         <p className='memberCheck'><button onClick={showModal}>아이디/비밀번호찾기</button>
           {modalOpen && <LoginModal setModalOpen={setModalOpen}></LoginModal>}
         </p>

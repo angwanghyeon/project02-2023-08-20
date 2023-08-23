@@ -13,10 +13,13 @@
 .noticeDetail-title span{
   text-align: right;
   line-height: 86px;
+  margin-right: 10px;
+
 }
 .noticeDetail-box{
   text-align: left;
-  margin-top: 20px;
+  margin: 30px auto;
+  height: 500px;
   border-top: 2px solid black;
   border-bottom: 1px solid #ccc;
   padding: 20px 30px;
@@ -63,4 +66,10 @@
 .noticeDetail-inside textarea:focus{
   outline: none;
 }
-
+@media screen and (max-width:1024px) {
+  .noticeDetail-title h1{
+    text-align: left;
+    width: 80%;
+    margin-left: 20px;
+  }
+}

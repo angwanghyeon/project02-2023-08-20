@@ -29,7 +29,7 @@
 }
 
 .login-active .id-pw .id {
-  margin-top: 45px;
+  margin-top: 65px;
   padding: 10px 20px;
 }
 
@@ -62,13 +62,23 @@
   grid-row: 5/6;
   line-height: 66px;
 }
-
+.login-active .membership > button{
+  margin-top: 20px;
+  border: none;
+  background-color: beige;
+  font-size: large;
+  padding: 10px;
+}
 .login-active .memberCheck {
   grid-column: 4/6;
   grid-row: 5/6;
 }
 .login-active .memberCheck > button{
   margin-top: 20px;
+  border: none;
+  background-color: beige;
+  font-size: large;
+  padding: 10px;
 }
 
 .sns-login {
