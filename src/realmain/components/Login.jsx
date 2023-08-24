@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
 import { VscAccount } from 'react-icons/vsc';
 import style from '../css/Login.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import OnModal from './OnModal';
 import LoginModal from './LoginModal';
 
 const Login = () => {
+  const navigate = useNavigate();
   const [modalOpen, setModalOpen] = useState(false);
   const showModal = () => {
     setModalOpen(true);
   }
-
+  const [checkLogin, setCheckLogin] = useState(true);
+  const LogBtn = (e) => {
+    if(e.target.value === ''){
+      setCheckLogin(true);
+    }
+  }
   return (
     <div className='login-content'>
       <div className='login-title'>
@@ -25,7 +31,7 @@ const Login = () => {
           <p ><input type="password" className='pw' placeholder='비밀번호를 입력해주세요' /></p>
         </div>
         <p className='id-save'>아이디 저장 <input type="checkbox" /></p>
-        <p className='login-btn'>로그인</p>
+        <p className='login-btn' onClick={() => checkLogin ? navigate('/') : alert('아이디나 비밀번호를 잘못입력하셨습니다.')}>로그인</p>
         <p className='membership'><button>회원가입</button></p>
         <p className='memberCheck'><button onClick={showModal}>아이디/비밀번호찾기</button>
           {modalOpen && <LoginModal setModalOpen={setModalOpen}></LoginModal>}

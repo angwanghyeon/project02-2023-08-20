@@ -1,5 +1,5 @@
 .festival-title{
-  width: 100%;
+  width: 100vw;
   height: 1
   20px;
 }
@@ -8,7 +8,7 @@
   margin: 10px;
 }
 .festival-category{
-  width: 100%;
+  width: 100vw;
   height: 50px;
 }
 .festival-category label{

@@ -5,13 +5,13 @@ import data from '../data/festival.json';
 
 const FesList = (props) => {
   const navigate = useNavigate();
-  const { 시작일, 종료일, 콘텐츠명 } = props.data;
+  const { 시작일, 종료일, 콘텐츠명, imgUrl } = props.data;
   return (
-    <ul key={콘텐츠명} onClick={()=>navigate('/info/festival/detail/:id?')}>
-      <li><img src="" alt="콘텐츠 이미지" /></li>
-      <li>{콘텐츠명}</li>
-      <li>{시작일}</li>
-      <li>{종료일}</li>
+    <ul key={콘텐츠명} onClick={()=>navigate('/info/festival/detail/'+props.data.id)}>
+      <li style={{padding:'0'}}><img src={imgUrl} alt="콘텐츠 이미지" style={{width:'240px',height:'120px',padding:'0'}} /></li>
+      <li style={{lineHeight:'40px'}}>{콘텐츠명}</li>
+      <li>시작일 : {시작일}</li>
+      <li>종료일 : {종료일}</li>
     </ul>
   )
 }

@@ -2,9 +2,11 @@ import React from 'react';
 import style from '../css/KnowledgeWrite.css'
 import { VscSearch } from 'react-icons/vsc';
 // import { VscSearch } from 'react-icons/vsc';
+import { useNavigate } from 'react-router-dom';
 
 
 const KnowledgeWrite = () => {
+  const navigate = useNavigate();
   return (
     <div className='knowledge-content'>
       <div className='knowledge-write-title'>
@@ -17,7 +19,7 @@ const KnowledgeWrite = () => {
       </div>
       <div className='ask-box'>
         <div className='ask-category'>
-          <h4>카테고리 선택</h4>
+          <h3>카테고리 선택</h3>
           <p>질문하실 분야를 선택해주세요</p>
           <select className='category'>
             <option value="관광지">관광지</option>
@@ -42,6 +44,7 @@ const KnowledgeWrite = () => {
       </div>
       <div className='button-box'>
         <button className='submit-knowledge'>작성완료</button>
+        <button className='back-to-knlist'onClick={()=>navigate(-1)}>목록으로 돌아가기</button>
       </div>
     </div>
   );
